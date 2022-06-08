@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+:root {
+  --colorText: #282642;
+  --colorLGreen: #84C69C;
+  --colorDGreen: #0E9F51;
+  --colorSweete: #E9D7DD;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.color_text {
+  color: var(--colorText);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.color_l_green {
+  color: var(--colorLGreen);
+}
+
+.color_D_green {
+  color: var(--colorDGreen)
+}
+
+.color_sweete {
+  color: var(--colorSweete);
+}
+
+.bg_text {
+  background-color: var(--colorText);
+}
+
+.bg_l_green {
+  background-color: var(--colorLGreen);
+}
+
+.bg_d_green {
+  background-color: var(--colorDGreen)
+}
+
+.bg_sweete {
+  background-color: var(--colorSweete);
+}
+
+.activeClassName {
+  color: rgb(105, 105, 105);
+
+  background-color: var(--colorText);
+
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+
+}
+
+.swiper-slide {
+  background-position: bottom;
+  background-origin: content-box;
+  background-size: cover;
+
+}
+
+.swiper-slide img {
+
+  width: 100%;
+
+}
+
+/* Update news section */
+.UpdateNews {
+  height: 500px;
+}
+
+.date:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #e2e8f0;
+  top: 12px;
+  width: 150px;
+}
+
+.date:after {
+  margin-left: 15px;
+}
+
+.svg-container {
+  background-image: url('/src/resource/topBg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(126, 74, 76);
+  background-blend-mode: exclusion;
+  background-position: center, 50%, 50%;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .itemContaier {
+    display: none;
+    background-color: #0E9F51;
+  }
+
+  .mySwiper,
+  .Slider,
+  .SwiperSlide {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-gradient-cover {
+  background-color: transparent;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.92));
+  background-position-y: -1px;
 }
 
-.App-link {
-  color: #61dafb;
+.max-h-98 {
+  max-height:24.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-one>article:nth-child(1) {
+  padding-top: 0;
+  padding-bottom: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+.box-one>article:nth-child(2) {
+  padding-top: 0;
+  padding-bottom: 0.125rem;
+  padding-left: 0.125rem;
+}
+
+.box-one>article:nth-child(3) {
+  padding-top:0.125rem;
+  padding-bottom: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+.box-one>article:nth-child(4) {
+  padding-top:0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.125rem;
 }
