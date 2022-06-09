@@ -43,17 +43,17 @@ function classNames(...classes) {
 export default function Navbar() {
     return (
         <>
-            <div className="min-h-full">
+            <div className="min-h-full sticky z-50 top-0">
                 <Disclosure as="nav" className="bg-white shadow">
                     {({ open }) => (
                         <>
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="flex items-center justify-between h-16">
+                                <div className="flex items-center justify-between h-20">
                                     <div className="flex items-center">
                                         <div className="flex-shrink-0">
                                             <Link to={'/'}>
                                                 <img
-                                                    className="h-8 w-8"
+                                                    className="h-16 w-16"
                                                     src={headerLogo}
                                                     alt="MIST Logo"
                                                 />
@@ -133,7 +133,7 @@ export default function Navbar() {
                                                 className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                             >
                                                 <span className="sr-only">View notifications</span>
-                                                <BellIcon className="h-6 w-6" aria-hidden="true" />
+                                                <BellIcon className="h-8 w-8" aria-hidden="true" />
                                             </button>
 
                                             {/* Profile dropdown */}
@@ -141,7 +141,7 @@ export default function Navbar() {
                                                 <div>
                                                     <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                                                         <span className="sr-only">Open user menu</span>
-                                                        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                                                        <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                                                     </Menu.Button>
                                                 </div>
                                                 <Transition

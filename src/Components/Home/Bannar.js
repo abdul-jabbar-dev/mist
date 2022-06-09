@@ -13,7 +13,7 @@ const Bannar = () => {
     return (
         <div>
 
-            <section className="bg-white dark:bg-gray-900">
+            <section  className="bg-white dark:bg-gray-900 z-20">
                 <div className="container px-6 py-10 mx-auto">
                     <div className="lg:flex lg:items-center">
                         <div className="w-full space-y-12 lg:w-1/2 ">

@@ -14,12 +14,11 @@ import s6 from "../../resource/carousel/s6.jpg"
 import UpdateNews from "./UpdateNews";
 const Slider = () => {
     return (
-        <div className="container m-auto gap-8 grid grid-cols-4">
+        <div className="container m-auto  gap-8 grid grid-cols-4 overflow-hidden  ">
 
-            <div className="lg:col-span-3  col-span-4 select-none">
+            <div className="lg:col-span-3 col-span-4 rounded-lg  h-60 sm:h-80 md:h-96 lg:h-full overflow-hidden select-none">
                 <Swiper
                     spaceBetween={30}
-                    centeredSlides={true}
                     loop={true}
                     autoplay={{
                         delay: 2500,
@@ -28,32 +27,31 @@ const Slider = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper "
+                    modules={[Autoplay]}
+                    className="mySwiper overflow-hidden"
                 >
                     <SwiperSlide>
-                        <img src={s1} alt="" />
+                        <img src={s1} alt="" height={'100%'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={s2} alt="" />
+                        <img src={s2} alt="" height={'100%'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={s3} alt="" />
+                        <img src={s3} alt="" height={'100%'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={s4} alt="" />
+                        <img src={s4} alt="" height={'100%'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={s5} alt="" />
+                        <img src={s5} alt="" height={'100%'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={s6} alt="" />
+                        <img src={s6} alt="" height={'100%'} />
                     </SwiperSlide>
                 </Swiper>
             </div>
 
-            <div className="UpdateNews relative  col-span-4 lg:col-span-1 shadow overflow-hidden rounded-lg bottom-1 ">
+            <div className="UpdateNews relative  col-span-4 lg:col-span-1 shadow  overflow-x-hidden  rounded-lg bottom-1 ">
                 <UpdateNews></UpdateNews>
             </div>
         </div>

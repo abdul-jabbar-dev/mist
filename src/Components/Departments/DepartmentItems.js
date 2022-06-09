@@ -1,9 +1,5 @@
+
 import React from 'react';
-
-
-
-
-
 
 
 
@@ -12,9 +8,10 @@ const DepartmentItems = ({ name, img }) => {
         <div >
             <div className="card bg-[#15263F]  mx-auto h-[23rem] w-80 rounded-xl p-6 space-y-4">
                 <a href="#d">
-                    <img className="w-full h-64 rounded-md transition hover:bg-cyan-300"
+                   <img className="w-full h-64 rounded-md transition "
                         src={img}
-                        alt={name} />
+                        alt={name}
+                         />
                 </a>
                 <div id="description" className="space-y-4">
                     <a href="#d">

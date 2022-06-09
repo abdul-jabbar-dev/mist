@@ -12,11 +12,11 @@ const Events = () => {
                         {/* <!--Start left cover--> */}
                         <div class="flex-shrink max-w-full w-full lg:w-1/2 pb-1 lg:pb-0 lg:pr-1">
                             <div class="relative hover-img max-h-98 overflow-hidden">
-                                <a href="#">
+                                <a href="#s">
                                     <img class="max-w-full w-full mx-auto h-auto" src="https://scontent.fdac136-1.fna.fbcdn.net/v/t39.30808-6/277295472_2231745283644714_3226774067115756918_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=666b5a&_nc_eui2=AeHnHCVlIAUOCT429ze6Z0a2tAGKjRgJhRm0AYqNGAmFGaL4qNjiHk64PfnXPKnfkdpuhm024PQz2YQmTWSwrS8f&_nc_ohc=u5B0giD02kIAX-U93C8&tn=DrkxMzvYBK9HBa9T&_nc_ht=scontent.fdac136-1.fna&oh=00_AT93Htp51VEkqKpauh8g357wwNN7WZcBLcapbOHoCHAc9A&oe=62A5BA74" alt="Image description"/>
                                 </a>
                                 <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
-                                    <a href="#">
+                                    <a href="#s">
                                         <h2 class="text-3xl font-bold capitalize text-white mb-3">Civil -6 Semester Poject</h2>
                                     </a>
                                     <p class="text-gray-100 hidden sm:inline-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores labore aperiam neque repellendus. Omnis aliquam voluptatibus culpa ducimus ab, quis praesentium! Nulla sequi a quas repudiandae cumque dignissimos..</p>

@@ -9,7 +9,7 @@ const UpdateNews = () => {
     }, []);
     const createId = (id, i) => 'cid' + (id)?.toLowerCase()?.replace(/ /g, '')?.slice(0, 3) + i
     return (
-        <div className=" bg-gray-100 flex  content-center flex-col ">
+        <div className=" bg-gray-100 flex  content-center flex-col rounded-lg ">
             <div className="bg-white  p-4  ">
                 {allnewsData.map((news, i) =>
                     <div key={i} >
@@ -104,7 +104,7 @@ const UpdateNews = () => {
                 </div> */}
 
             </div>
-            <Link to="/news" className="text-center cursor-pointer absolute left-0 right-0 bottom-0 bg-slate-100 border-t-2 hover:text-sky-600 ">See more</Link>
+            <Link to="/news" className="sticky  text-center cursor-pointer  left-0 right-0 bottom-0 bg-slate-100 border-t-2 hover:text-sky-600 ">See more</Link>
         </div >
     );
 };

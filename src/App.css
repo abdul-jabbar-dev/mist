@@ -100,6 +100,7 @@
   .Slider,
   .SwiperSlide {
     display: block;
+  
   }
 }
 
@@ -110,7 +111,7 @@
 }
 
 .max-h-98 {
-  max-height:24.3rem;
+  max-height: 24.3rem;
 }
 
 .box-one>article:nth-child(1) {
@@ -126,13 +127,41 @@
 }
 
 .box-one>article:nth-child(3) {
-  padding-top:0.125rem;
+  padding-top: 0.125rem;
   padding-bottom: 0.125rem;
   padding-right: 0.125rem;
 }
 
 .box-one>article:nth-child(4) {
-  padding-top:0.125rem;
+  padding-top: 0.125rem;
   padding-bottom: 0.125rem;
   padding-left: 0.125rem;
+}
+
+
+
+.tab {
+  overflow: hidden;
+}
+
+.tab-content {
+  max-height: 0;
+  transition: all 0.5s;
+}
+
+input:checked+.tab-label .test {
+  background-color: #000;
+}
+
+input:checked+.tab-label .test svg {
+  transform: rotate(180deg);
+  stroke: #fff;
+}
+
+input:checked+.tab-label::after {
+  transform: rotate(90deg);
+}
+
+input:checked~.tab-content {
+  max-height: 100vh;
 }
