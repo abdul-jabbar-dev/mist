@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineCloudDownload } from "@react-icons/all-files/ai/AiOutlineCloudDownload";
 import { MdZoomOutMap } from "@react-icons/all-files/md/MdZoomOutMap";
-import InvoiceDetails from './invoice/InvoiceDetails';
-import { IoIosClose } from "@react-icons/all-files/io/IoIosClose";
+
 import { Link } from 'react-router-dom';
 import { invoices } from '../../Api/invoice';
 

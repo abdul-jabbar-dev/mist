@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, NavLink } from 'react-router-dom'
 import headerLogo from '../resource/headerlogo.png'
 
@@ -61,7 +61,7 @@ export default function Navbar() {
                                         </div>
                                         <div className="hidden md:block">
                                             <div className="ml-10 flex items-baseline space-x-4">
-                                                {navigation.map((item,i) => (
+                                                {navigation.map((item, i) => (
                                                     item.submenu ? <div key={i}>
                                                         <Menu as="div" className=" relative text-left p-0 m-0">
                                                             <NavLink to={item.to}
@@ -86,7 +86,7 @@ export default function Navbar() {
                                                             >
                                                                 <Menu.Items className="origin-top absolute z-50 left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 focus:outline-none">
                                                                     <div className="py-1">
-                                                                        {item.submenu && item.submenu.map((items,i) => {
+                                                                        {item.submenu && item.submenu.map((items, i) => {
                                                                             return (
                                                                                 <Menu.Item key={i}>
                                                                                     {({ active }) => (
@@ -128,13 +128,7 @@ export default function Navbar() {
                                     </div>
                                     <div className="hidden md:block">
                                         <div className="ml-4 flex items-center md:ml-6">
-                                            <button
-                                                type="button"
-                                                className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                                            >
-                                                <span className="sr-only">View notifications</span>
-                                                <BellIcon className="h-8 w-8" aria-hidden="true" />
-                                            </button>
+
 
                                             {/* Profile dropdown */}
                                             <Menu as="div" className="ml-3 relative">
@@ -154,12 +148,12 @@ export default function Navbar() {
                                                     leaveTo="transform opacity-0 scale-95"
                                                 >
                                                     <Menu.Items className="origin-top-right absolute z-50 right-0 mt-2 w-48  shadow-lg  bg-white ring-1 focus:outline-none">
-                                                        {userNavigation.map((item,i) => (
+                                                        {userNavigation.map((item, i) => (
                                                             <Menu.Item key={i}>
                                                                 <Link to={item.to}
                                                                     className={'bg-gray-100 text-gray-900 block px-4 py-2 hover:bg-slate-800 hover:text-slate-100 text-sm'}
                                                                 >
-                                                                        {item.name}
+                                                                    {item.name}
                                                                 </Link>
                                                             </Menu.Item>
                                                         ))}
@@ -184,7 +178,7 @@ export default function Navbar() {
 
                             <Disclosure.Panel className="md:hidden">
                                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
-                                    {navigation.map((item,i) => (
+                                    {navigation.map((item, i) => (
                                         item.submenu ?
                                             <Menu as="div" key={i} className=" relative text-left p-0 m-0">
                                                 <Link to={item.to} className="inline-flex justify-start w-full pl-3 py-2 mt-0 rounded-md text-base font-medium color_text hover:text-white hover:bg-gray-700 ">
@@ -205,7 +199,7 @@ export default function Navbar() {
                                                 >
                                                     <Menu.Items className="origin-top absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1  focus:outline-none">
                                                         <div className="py-1">
-                                                            {item.submenu && item.submenu.map((items,i) => {
+                                                            {item.submenu && item.submenu.map((items, i) => {
                                                                 return (
                                                                     <Menu.Item key={i}>
                                                                         {({ active }) => (
@@ -254,16 +248,10 @@ export default function Navbar() {
                                             <div className="text-base font-medium leading-none text-white">{user.name}</div>
                                             <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
                                         </div>
-                                        <button
-                                            type="button"
-                                            className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                                        >
-                                            <span className="sr-only">View notifications</span>
-                                            <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                        </button>
+
                                     </div>
                                     <div className="mt-3 px-2 space-y-1">
-                                        {userNavigation.map((item,i) => (
+                                        {userNavigation.map((item, i) => (
                                             <Disclosure.Button
                                                 key={i}
                                                 as="a"

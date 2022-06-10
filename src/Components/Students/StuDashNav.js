@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, useMatch } from 'react-router-dom';
 import { SiGoogleclassroom } from "@react-icons/all-files/si/SiGoogleclassroom";
 import { HiOutlineCurrencyDollar } from "@react-icons/all-files/hi/HiOutlineCurrencyDollar";
 import { RiBillLine } from "@react-icons/all-files/ri/RiBillLine";
@@ -7,9 +7,11 @@ import { CgMenuGridO } from "@react-icons/all-files/cg/CgMenuGridO";
 import { FaGraduationCap } from "@react-icons/all-files/fa/FaGraduationCap";
 import { HiOutlineDocumentReport } from "@react-icons/all-files/hi/HiOutlineDocumentReport";
 import { MdLiveTv } from "@react-icons/all-files/md/MdLiveTv";
+import { CgProfile } from "@react-icons/all-files/cg/CgProfile";
 
 
 const navigationLinks = [
+    { menus: 'Student Profile', icon: <CgProfile className="h-5 w-5" />, to: `/studentdash` },
     { menus: 'Routine', icon: <SiGoogleclassroom className="h-5 w-5" />, to: 'classrouting' },
     { menus: 'Class shedule', icon: <CgMenuGridO className="h-5 w-5" />, to: 'classshedule' },
     { menus: 'Attendance Report', icon: <HiOutlineDocumentReport className="h-5 w-5" />, to: 'attendancereport' },
@@ -21,6 +23,7 @@ const navigationLinks = [
 
 
 const StuDashNav = () => {
+    const path = Boolean(useMatch('/studentdash'))
     return (
         <div>
             {/* <!-- component --> */}
@@ -32,7 +35,7 @@ const StuDashNav = () => {
                         {navigationLinks.map((menu, i) =>
                             <NavLink to={menu.to}
                             key={i}
-                                className={({ isActive }) => 'flex transform rounded-md items-center mt-5 duration-200 px-4 py-2 transition-colors w-full'.concat(isActive ? ('text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-200') : 'dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:bg-gray-700 text-gray-400 hover:text-gray-200')
+                                className={({ isActive }) => 'flex transform rounded-md items-center mt-5 duration-200 px-4 py-2 transition-colors w-full'.concat(path && isActive ? ('text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-200') : 'dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:bg-gray-700 text-gray-400 hover:text-gray-200')
                                 }>
                                 {menu.icon}
                                 < span className="mx-4 font-medium" > {menu.menus}</span>

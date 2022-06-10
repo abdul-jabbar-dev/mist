@@ -16,6 +16,9 @@ import StuCertificates from './Components/Students/StuCertificates';
 import StuClassShedule from './Components/Students/StuClassShedule';
 import StuAttendanceReport from './Components/Students/StuAttendanceReport';
 import InvoiceDetails from './Components/Students/invoice/InvoiceDetails';
+import StuDashHome from './Components/Students/StuDashHome';
+import LoginPage from './Pages/Authorization/LoginPage';
+import PageNotFound from './globalComponents/PageNotFound';
 
 
 function App() {
@@ -27,9 +30,11 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contactwithus" element={<ContactWithUs />} />
           <Route path="/admininfo" element={<AdminInfo />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/studentdash" element={<StudentsDashboard />} >
 
             {/* student Dashboard nested routes */}
+            <Route path='/studentdash'  element={<StuDashHome />} />
             <Route path="invoice" element={<StuInvoiceList />} />
             <Route path="invoice/:invoiceId" element={<InvoiceDetails />} />
             <Route path="classrouting" element={<StuClassRouting />} />
@@ -42,6 +47,7 @@ function App() {
           </Route>
           <Route path="/departments" element={<Departments />} />
           <Route path="/news" element={<News />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -25,7 +25,7 @@ const News = () => {
                         <section className="text-gray-600 body-font">
                             {
                                 data.map((item, i) => <div key={i} className="container px-5  mx-auto">
-                                    <span className={item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] && " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", '')}>{item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] && item.publishDate.split('/')[1] + ' ' + item.publishDate.split('/')[2]}</span>
+                                    <span className={item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] ? " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", ''):''}>{item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] && item.publishDate.split('/')[1] + ' ' + item.publishDate.split('/')[2]}</span>
 
                                     <div id={createId(item.news,i)} className="p-5 bg-white flex items-center mx-auto border-b my-1 border-gray-200 rounded-lg sm:flex-row flex-col">
                                         <div className="sm:w-32 mb-auto sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">

@@ -13,7 +13,7 @@ const UpdateNews = () => {
             <div className="bg-white  p-4  ">
                 {allnewsData.map((news, i) =>
                     <div key={i} >
-                        <span className={news.publishDate.split('/')[1] !== newsData[i - 1]?.publishDate.split('/')[1] && " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", '')}>{news.publishDate.split('/')[1] !== newsData[i - 1]?.publishDate.split('/')[1] && news.publishDate.split('/')[1] + ' ' + news.publishDate.split('/')[2]}</span>
+                        <span className={news.publishDate.split('/')[1] !== newsData[i - 1]?.publishDate.split('/')[1] ? " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", ''):''}>{news.publishDate.split('/')[1] !== newsData[i - 1]?.publishDate.split('/')[1] && news.publishDate.split('/')[1] + ' ' + news.publishDate.split('/')[2]}</span>
                         <div className="flex mb-4">
                             <div className="w-2/12">
                                 <span className="text-sm text-gray-600 block">{news.publishDate.split('/')[0] + ' ' + news.publishDate.split('/')[1].slice(0, 3)}</span>
