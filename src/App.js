@@ -15,6 +15,7 @@ import StuOnlinePayment from './Components/Students/StuOnlinePayment';
 import StuCertificates from './Components/Students/StuCertificates';
 import StuClassShedule from './Components/Students/StuClassShedule';
 import StuAttendanceReport from './Components/Students/StuAttendanceReport';
+import InvoiceDetails from './Components/Students/invoice/InvoiceDetails';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
             {/* student Dashboard nested routes */}
             <Route path="invoice" element={<StuInvoiceList />} />
+            <Route path="invoice/:invoiceId" element={<InvoiceDetails />} />
             <Route path="classrouting" element={<StuClassRouting />} />
             <Route path="classshedule" element={<StuClassShedule />} />
             <Route path="attendancereport" element={<StuAttendanceReport />} />

@@ -31,6 +31,7 @@ const StuDashNav = () => {
                     <nav>
                         {navigationLinks.map((menu, i) =>
                             <NavLink to={menu.to}
+                            key={i}
                                 className={({ isActive }) => 'flex transform rounded-md items-center mt-5 duration-200 px-4 py-2 transition-colors w-full'.concat(isActive ? ('text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-200') : 'dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:bg-gray-700 text-gray-400 hover:text-gray-200')
                                 }>
                                 {menu.icon}

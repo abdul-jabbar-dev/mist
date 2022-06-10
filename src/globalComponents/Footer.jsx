@@ -2,10 +2,9 @@ import React from 'react';
 import collageLogo from '../resource/headerlogo.png'
 const Footer = () => {
     return (
-        <div>
-
-            <footer className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div className="bg-gray-100">
+            <footer className="text-gray-600 body-font ">
+                <div className="container px-5 bg-gray-100 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
                         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                             <img src={collageLogo} className="w-10 h-10 text-white   rounded-full" alt="" />

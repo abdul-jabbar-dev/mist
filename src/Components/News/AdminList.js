@@ -44,8 +44,8 @@ const AdminList = () => {
                                     </thead>
                                     <tbody className="text-sm divide-y divide-gray-100">
                                         {
-                                            AdministratorInfo.map((profile, i) => <tr>
-                                                <td key={i} className="p-2 whitespace-nowrap">
+                                        AdministratorInfo.map((profile, i) => <tr key={i}>
+                                                <td className="p-2 whitespace-nowrap">
                                                     <div className="flex items-center">
                                                         <div className="w-16 h-16 flex-shrink-0 mr-2 sm:mr-3"><img className="rounded-full" src={profile.img} width="80" height="80" alt="Alex Shatov" /></div>
                                                         <div className="font-medium text-gray-800">{profile.name}</div>
