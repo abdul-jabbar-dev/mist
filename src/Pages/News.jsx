@@ -1,10 +1,15 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { newsData as data } from '../Api/news';
 import Footer from '../globalComponents/Footer';
 import Navbar from '../globalComponents/Navbar';
 import noImage from '../resource/headerlogo.png'
-
+const CustomHeader = () => {
+    return (<Helmet>
+        <title>Notifications</title>
+    </Helmet>)
+}
 
 const News = () => {
     const fileDownload = e => {
@@ -15,9 +20,10 @@ const News = () => {
             e._targetInst.sibling.stateNode.classList.remove('hidden')
         }
     }
-    const createId = (id,i) => 'cid' + (id)?.toLowerCase()?.replace(/ /g, '')?.slice(0, 3) + i
+    const createId = (id, i) => 'cid' + (id)?.toLowerCase()?.replace(/ /g, '')?.slice(0, 3) + i
     return (
         <>
+            <CustomHeader></CustomHeader>
             <Navbar></Navbar>
             <div>
                 <div className="bg-gray-100" >
@@ -25,11 +31,11 @@ const News = () => {
                         <section className="text-gray-600 body-font">
                             {
                                 data.map((item, i) => <div key={i} className="container px-5  mx-auto">
-                                    <span className={item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] ? " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", ''):''}>{item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] && item.publishDate.split('/')[1] + ' ' + item.publishDate.split('/')[2]}</span>
+                                    <span className={item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] ? " date ".concat("text-gray-900 relative inline-block  uppercase font-medium my-3 ", '') : ''}>{item.publishDate.split('/')[1] !== data[i - 1]?.publishDate.split('/')[1] && item.publishDate.split('/')[1] + ' ' + item.publishDate.split('/')[2]}</span>
 
-                                    <div id={createId(item.news,i)} className="p-5 bg-white flex items-center mx-auto border-b my-1 border-gray-200 rounded-lg sm:flex-row flex-col">
+                                    <div id={createId(item.news, i)} className="p-5 bg-white flex items-center mx-auto border-b my-1 border-gray-200 rounded-lg sm:flex-row flex-col">
                                         <div className="sm:w-32 mb-auto sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
-                                            <a href={item.file ? item.file:null} target="_blank" download="YourName resume.pdf" rel="noopener noreferrer" className='relative'>
+                                            <a href={item.file ? item.file : null} target="_blank" download="YourName resume.pdf" rel="noopener noreferrer" className='relative'>
                                                 <img
                                                     className=' relative  '
                                                     onMouseEnter={e => fileDownload(e)}

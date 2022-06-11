@@ -10,7 +10,7 @@ import WelcomeBanner from '../Components/Home/WelcomeBanner';
 
 const CustomHeader = () => {
     return (<Helmet>
-        <title>MIST</title>
+        <title>Model institute of science and technology</title>
     </Helmet>)
 }
 

@@ -15,6 +15,7 @@ import telecommunicationEngineering from '../resource/Departments/image/telecomm
 import MechanicalEngineering from '../resource/Departments/image/MechanicalEngineering.jpg'
 import FoodTechnology from '../resource/Departments/image/FoodTechnology.jpg'
 import Footer from '../globalComponents/Footer';
+import { Helmet } from 'react-helmet';
 
 const departments = [
     { name: 'Architecture Engineering', image: ArchitectureEngineering },
@@ -30,10 +31,15 @@ const departments = [
     { name: 'Food Technology', image: FoodTechnology },
 
 ]
-
+const CustomHeader = () => {
+    return (<Helmet>
+        <title>Departments</title>
+    </Helmet>)
+}
 const Departments = () => {
     return (
         <div className="bg-gray-100">
+            <CustomHeader></CustomHeader>
             <Navbar></Navbar>
 <br />
             <div className="container  itemContaier mx-auto justify-items-center lg:px-12 grid 2xl:grid-cols-4 grid-cols-3 gap-y-4">

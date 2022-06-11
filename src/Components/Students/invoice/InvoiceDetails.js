@@ -23,8 +23,8 @@ const InvoiceDetails = () => {
                                         <div className="space-y-4">
                                             <div>
                                                 <img alt="d" className="h-8 object-cover mb-4" src={logo} />
-                                                <p className=" text-lg"> Model Institute of science and technology</p>
-                                                <p className="font-bold text-lg"> Invoice </p>
+                                                <p className=" text-lg uppercase"> Model Institute of science and technology</p>
+                                                <p className="font-bold text-2xl"> Invoice  <span className="text-3xl text-slate-500 font-normal"># {myInvoice.invoiceId}</span></p>
                                             </div>
                                             <div>
                                                 <p className="font-medium text-sm text-gray-400"> Billed To </p>
@@ -36,8 +36,8 @@ const InvoiceDetails = () => {
                                         <div className="space-y-2">
                                             {myInvoice.deuBill > 0 ? <h2 className="py-3 text-center my-4 uppercase text-red-400 font-extrabold outline-dotted outline-4 outline-red-500">Unpaid</h2> : <h2 className="py-3 text-center my-4 uppercase text-green-400 font-extrabold outline-dotted outline-4 outline-green-500">paid</h2>}
                                             <div>
-                                                <p className="font-medium text-sm text-gray-400"> Invoice Number </p>
-                                                <p> {myInvoice.invoiceId} </p>
+                                                <p className="font-medium text-sm text-gray-400"> Recept Number </p>
+                                                <p> {myInvoice.receptNo} </p>
                                             </div>
                                             <div>
                                                 <p className="font-medium text-sm text-gray-400"> Invoice Date </p>

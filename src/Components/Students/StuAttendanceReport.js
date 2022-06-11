@@ -31,7 +31,7 @@ const classAttend = [
 const StuAttendanceReport = () => {
     return (
         <div
-            className="h-[600px] w-[50%] mx-auto"
+            className="h-[600px] xl:w-[50%] lg:w-3/4 w-11/12 mx-auto"
         >
             <FullCalendar
                 events={classAttend}

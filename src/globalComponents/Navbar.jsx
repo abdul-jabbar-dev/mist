@@ -28,11 +28,9 @@ const navigation = [
     { name: 'NEWS', to: '/news', current: false },
     { name: 'ADMIN INFO', to: '/admininfo', current: false },
     { name: 'LOGIN', to: '/login', current: false },
-    { name: 'REPORTS', to: '/reports', current: false },
 ]
 const userNavigation = [
     { name: 'Your Profile', to: '/studentdash' },
-    { name: 'Settings', to: '/' },
     { name: 'Sign out', to: '/' },
 ]
 

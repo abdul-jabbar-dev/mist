@@ -10,13 +10,13 @@ const StudentsDashboard = () => {
 
             <Navbar></Navbar>
 
-            <div className="flex bg-gray-100  ">
+            <div className="flex flex-col md:flex-row bg-gray-100  ">
 
-                <div className="flex-none">
+                <div className="sm:flex-none">
                     <StuDashNav></StuDashNav>
                 </div>
 
-                <div className="flex-1">
+                <div className="sm:flex-1">
                     <Outlet></Outlet>
 
                 </div>

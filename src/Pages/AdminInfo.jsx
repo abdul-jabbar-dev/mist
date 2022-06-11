@@ -1,16 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import AdminList from '../Components/News/AdminList';
 import Footer from '../globalComponents/Footer';
 import Navbar from '../globalComponents/Navbar';
 
-
+const CustomHeader = () => {
+    return (<Helmet>
+        <title>Admin Information</title>
+    </Helmet>)
+}
 
 
 
 const FocalPointUnit = () => {
     return (
         <>
+            <CustomHeader></CustomHeader>
             <NavLink to={'/'}><h5 className='text-slate-700 hover:text-sky-600 font-bold mt-6 text-lg '>Administrators</h5></NavLink>
             <NavLink to={'/'}><h5 className='text-slate-700 hover:text-sky-600 font-bold mt-6 text-lg'>Office Section</h5></NavLink>
             <NavLink to={'/'}><h5 className='text-slate-700 hover:text-sky-600 font-bold mt-6 text-lg'>Registrar Section</h5></NavLink>

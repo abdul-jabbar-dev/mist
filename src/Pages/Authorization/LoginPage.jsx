@@ -2,10 +2,16 @@ import React from 'react';
 import { FiArrowDown } from '@react-icons/all-files/fi/FiArrowDown'
 import { FaArrowCircleLeft } from '@react-icons/all-files/fa/FaArrowCircleLeft'
 import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet';
+const CustomHeader = () => {
+    return (<Helmet>
+        <title>Login</title>
+    </Helmet>)
+}
 const LoginPage = () => {
     return (
         <div>
+            <CustomHeader></CustomHeader>
             {/* <!-- page --> */}
 
             <main
